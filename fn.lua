@@ -160,10 +160,10 @@ Odd  = Compose{Not, Even}
 Functional logical operators and conditions
 ---------------------------------------------------------------------------*/
 FAnd = function(fns)
-	return function(x)
+	return function(...)
 		local val
 		for _, f in pairs(fns) do
-			val = {f(x)}
+			val = {f(...)}
 			if not val[1] then return unpack(val) end
 		end
 		if val then return unpack(val) end
@@ -171,9 +171,9 @@ FAnd = function(fns)
 end
 
 FOr = function(fns)
-	return function(x)
+	return function(...)
 		for _, f in pairs(fns) do
-			local val = {f(x)}
+			local val = {f(...)}
 			if val[1] then return unpack(val) end
 		end
 		return false
