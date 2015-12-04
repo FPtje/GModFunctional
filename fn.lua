@@ -37,6 +37,7 @@ local ipairs = ipairs
 local error = error
 local math = math
 local select = select
+local type = type
 local _G = _G
 local fp = fp
 
