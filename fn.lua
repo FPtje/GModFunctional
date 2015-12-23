@@ -230,7 +230,7 @@ ForEach = function(f, xs)
 end
 
 Head = function(xs)
-    return table.GetFirstValue(xs)
+    return next(xs)
 end
 
 Last = function(xs)
